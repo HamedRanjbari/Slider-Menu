@@ -1,0 +1,119 @@
+:root {
+  --blackColor: #000;
+  --bgColor: #02021b;
+  --blueColor: #004471;
+  --purpleColor: #7e006b;
+  --redColor: #960037;
+  --greenColor: rgb(0, 231, 111);
+  --grayColor: rgb(154, 154, 154);
+  --whiteColor: antiquewhite;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  list-style: none;
+  text-decoration: none;
+  transition: transform 1s ease-in-out;
+}
+body {
+  background-color: var(--bgColor);
+  color: var(--whiteColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+h2{
+  margin-bottom: 2rem;
+}
+.open {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  opacity: 0.5;
+  transition: all 0.5s ease-in-out;
+  background-color: transparent;
+}
+.open:hover {
+  opacity: 1;
+}
+.black-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50vw;
+  max-width: 500px;
+  min-width: 300px;
+  background-color: var(--blackColor);
+  height: 100vh;
+  transition: transform 0.7s ease-in-out;
+  transform: translateX(-100vw);
+  transition-delay: .5s;
+}
+.black-layer.show {
+  transition-delay: .1s;
+  transform: translateX(0);
+}
+.purple-layer {
+  transition: all 0.7s ease-in-out;
+  background-color: var(--purpleColor);
+  height: 100vh;
+  transform: translateX(-100vw);
+  width: 90%;
+  transition-delay: .3s;
+}
+.purple-layer.show {
+  transition-delay: .3s;
+  transform: translateX(0);
+}
+.white-layer {
+  transition: all 0.7s ease-in-out;
+  background-color: var(--whiteColor);
+  height: 100vh;
+  transform: translateX(-100vw);
+  width: 90%;
+  color: var(--bgColor);
+  position: relative;
+  transition-delay: .1s;
+}
+.white-layer.show {
+  transition-delay: .5s;
+  transform: translateX(0);
+}
+.white-layer button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--redColor);
+}
+.text-container {
+  position: absolute;
+  left: 30px;
+  top: 80px;
+  width: 100%;
+}
+.lists {
+  margin: 3rem 0;
+}
+.lists li {
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  transition: all 0.6s ease-in-out;
+}
+.lists li:hover {
+  transform: translateX(10px);
+  color: var(--redColor);
+}
